@@ -129,7 +129,7 @@ sudo /home/scripts/nginx_check_script.sh
 sudo crontab -e
 ```
 
-Adicione a linha para executar o script a cada 5 minutos:
+Adicione a linha para executar o script a cada 1 minuto:
 
 ```bash
 * * * * * /home/scripts/nginx_check_script.sh
