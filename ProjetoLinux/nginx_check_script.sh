@@ -25,4 +25,13 @@ else
 	echo "$TIME - O site não está acessível ou retornou erro!" | tee -a "$LOGFILE"
 	func_alerta "\n**Status do site:**\n$TIME\n\n:warning: Atencao: o site não está acessível ou retornou erro!"
 
+	# Tenta reiniciar o Nginx
+	echo "$TIME - Tentando reiniciar o Nginx..." | tee -a "$LOGFILE"
+	if sudo systemctl restart nginx; then
+		echo "$TIME - Nginx reiniciado com sucesso." | tee -a "$LOGFILE"
+		func_alerta "\n**Ação automática:**\n$TIME\n\n:arrows_counterclockwise: O Nginx foi reiniciado automaticamente."
+	else
+		echo "$TIME - Falha ao reiniciar o Nginx!" | tee -a "$LOGFILE"
+		func_alerta "\n**Erro ao reiniciar:**\n$TIME\n\n:x: Falha ao tentar reiniciar o Nginx automaticamente."
+	fi
 fi
