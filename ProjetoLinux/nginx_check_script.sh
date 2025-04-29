@@ -7,7 +7,7 @@ LOGFILE="/var/log/meu_script.log"
 SITE_URL="http://novosite.local:8081"
 
 #Url webhook discord
-WEBHOOK_URL="(SEU WEBHOOK AQUI)"
+WEBHOOK_URL="https://discord.com/api/webhooks/SEU_WEBHOOK"
 
 #Hora da verificação
 TIME=$(date '+Data: %d-%m-%Y - Hora: %Hh%Mm%Ss')
