@@ -4,7 +4,7 @@
 LOGFILE="/var/log/meu_script.log"
 
 #Url do site
-SITE_URL="http://novosite.local:8081"
+SITE_URL="http://novosite.local"
 
 #Url webhook discord
 WEBHOOK_URL="https://discord.com/api/webhooks/SEU_WEBHOOK"
